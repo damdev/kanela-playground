@@ -1,14 +1,13 @@
 package com.github.damdev.kanela.example
 
-import com.ea.agentloader.AgentLoader
-import kanela.agent.KanelaEntryPoint
+import kanela.agent.attacher.Attacher
 
 object KanelaSuite {
 
   def init(clazz: Class[_]): Unit = {
     val folder = clazz.getPackage.getName.replace('.', '/')
     System.setProperty("config.resource", s"$folder/application.conf")
-    AgentLoader.loadAgentClass(classOf[KanelaEntryPoint].getName, null)
+    Attacher.attach()
   }
 
 }

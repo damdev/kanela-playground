@@ -8,9 +8,7 @@ scalaVersion := "2.12.8"
 
 libraryDependencies ++= Seq(
   "io.kamon"  %%  "kanela-scala-extension"  % "0.0.14",
-  "io.kamon" % "kanela-agent" % "0.0.15",
-  "com.ea.agentloader" % "ea-agent-loader" % "1.0.3"
-
+  "io.kamon" % "kanela-agent" % "0.0.15-dam",
 )
 
 fork in Test := true
