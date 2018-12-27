@@ -1,7 +1,7 @@
 package com.github.damdev.kanela.example.advisor.enter
 
 import com.github.damdev.kanela.Main
-import com.github.damdev.kanela.example.KanelaSuite
+import com.github.damdev.kanela.example.suite.KanelaSuite
 import kanela.agent.api.instrumentation.listener.InstrumentationRegistryListener
 import kanela.agent.libs.net.bytebuddy.asm.Advice._
 import kanela.agent.scala.KanelaInstrumentation
@@ -25,7 +25,7 @@ object KanelaOnEnterInstrumentationTest extends TestSuite with KanelaSuite {
   val tests: Tests = Tests {
     * - {
       Main.main(Array.empty)
-      println(InstrumentationRegistryListener.instance().getRecorded)
+      println(InstrumentationRegistryListener.instance().scrapeData())
     }
   }
 }

@@ -1,4 +1,4 @@
-package com.github.damdev.kanela.example
+package com.github.damdev.kanela.example.suite
 
 import kanela.agent.attacher.Attacher
 
